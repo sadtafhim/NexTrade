@@ -1,101 +1,96 @@
 import Link from 'next/link';
-import { Briefcase, Twitter, Linkedin, Github, Mail, MapPin, Phone } from 'lucide-react';
+import { ShoppingBag, Github, Twitter, Linkedin, Mail, ArrowUpRight } from 'lucide-react';
 
 export default function Footer() {
-    const currentYear = new Date().getFullYear();
-
     return (
-        <footer className="bg-gray-50 border-t border-gray-200 pt-16 pb-8">
+        <footer className="bg-white border-t border-gray-100 pt-20 pb-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
-                    {/* Column 1: Brand & Mission */}
-                    <div className="space-y-4">
+                    {/* Brand Column */}
+                    <div className="space-y-6">
                         <div className="flex items-center gap-2">
-                            <div className="bg-indigo-600 p-1.5 rounded-lg">
-                                <Briefcase className="w-5 h-5 text-white" />
+                            <div className="bg-indigo-600 p-2 rounded-xl">
+                                <ShoppingBag className="w-5 h-5 text-white" />
                             </div>
-                            <span className="text-xl font-bold text-gray-900 tracking-tight">
-                                Skill<span className="text-indigo-600">Sync</span>
+                            <span className="text-xl font-black text-gray-900 tracking-tighter">
+                                Nex<span className="text-indigo-600">Trade</span>
                             </span>
                         </div>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            Connecting world-class companies with the top 1% of freelance talent.
-                            Build your dream team in minutes, not months.
+                        <p className="text-gray-500 text-sm leading-relaxed">
+                            The next generation marketplace for pre-loved premium goods.
+                            Syncing your trades with speed and security.
                         </p>
-                        <div className="flex space-x-4 pt-2">
-                            <Link href="#" className="text-gray-400 hover:text-indigo-600 transition-colors">
-                                <Twitter className="w-5 h-5" />
+                        <div className="flex gap-4">
+                            <Link href="#" className="p-2 bg-gray-50 rounded-lg text-gray-400 hover:text-indigo-600 hover:bg-indigo-50 transition-all">
+                                <Twitter size={18} />
                             </Link>
-                            <Link href="#" className="text-gray-400 hover:text-indigo-600 transition-colors">
-                                <Linkedin className="w-5 h-5" />
+                            <Link href="#" className="p-2 bg-gray-50 rounded-lg text-gray-400 hover:text-indigo-600 hover:bg-indigo-50 transition-all">
+                                <Github size={18} />
                             </Link>
-                            <Link href="#" className="text-gray-400 hover:text-indigo-600 transition-colors">
-                                <Github className="w-5 h-5" />
+                            <Link href="#" className="p-2 bg-gray-50 rounded-lg text-gray-400 hover:text-indigo-600 hover:bg-indigo-50 transition-all">
+                                <Linkedin size={18} />
                             </Link>
                         </div>
                     </div>
 
-                    {/* Column 2: Quick Links */}
+                    {/* Quick Links */}
                     <div>
-                        <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">Marketplace</h3>
-                        <ul className="space-y-3">
-                            <li><Link href="/items" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">Browse Talent</Link></li>
-                            <li><Link href="/login" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">Post a Profile</Link></li>
-                            <li><Link href="#" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">Enterprise Solutions</Link></li>
-                            <li><Link href="#" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">Success Stories</Link></li>
+                        <h4 className="text-xs font-black uppercase tracking-widest text-gray-900 mb-6">Marketplace</h4>
+                        <ul className="space-y-4">
+                            <li>
+                                <Link href="/items" className="text-sm font-bold text-gray-500 hover:text-indigo-600 transition-colors flex items-center gap-1 group">
+                                    Browse All Items <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-all" />
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/add-item" className="text-sm font-bold text-gray-500 hover:text-indigo-600 transition-colors">Sell an Item</Link>
+                            </li>
+                            <li>
+                                <Link href="#" className="text-sm font-bold text-gray-500 hover:text-indigo-600 transition-colors">Featured Items</Link>
+                            </li>
                         </ul>
                     </div>
 
-                    {/* Column 3: Support & Legal */}
+                    {/* Support */}
                     <div>
-                        <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">Support</h3>
-                        <ul className="space-y-3">
-                            <li><Link href="#" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">Help Center</Link></li>
-                            <li><Link href="#" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">Terms of Service</Link></li>
-                            <li><Link href="#" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">Privacy Policy</Link></li>
-                            <li><Link href="#" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">Cookie Settings</Link></li>
+                        <h4 className="text-xs font-black uppercase tracking-widest text-gray-900 mb-6">Support</h4>
+                        <ul className="space-y-4">
+                            <li><Link href="#" className="text-sm font-bold text-gray-500 hover:text-indigo-600 transition-colors">Safety Center</Link></li>
+                            <li><Link href="#" className="text-sm font-bold text-gray-500 hover:text-indigo-600 transition-colors">How it Works</Link></li>
+                            <li><Link href="#" className="text-sm font-bold text-gray-500 hover:text-indigo-600 transition-colors">Contact Us</Link></li>
                         </ul>
                     </div>
 
-                    {/* Column 4: Contact & Newsletter */}
-                    <div className="space-y-4">
-                        <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">Get in Touch</h3>
-                        <div className="space-y-3">
-                            <div className="flex items-center gap-3 text-gray-600 text-sm">
-                                <Mail className="w-4 h-4 text-emerald-500" />
-                                <span>support@skillsync.com</span>
-                            </div>
-                            <div className="flex items-center gap-3 text-gray-600 text-sm">
-                                <MapPin className="w-4 h-4 text-emerald-500" />
-                                <span>San Francisco, CA</span>
-                            </div>
+                    {/* Newsletter */}
+                    <div className="space-y-6">
+                        <h4 className="text-xs font-black uppercase tracking-widest text-gray-900 mb-6">Stay Updated</h4>
+                        <div className="relative">
+                            <input
+                                type="email"
+                                placeholder="Enter email"
+                                className="w-full bg-gray-50 border border-gray-100 rounded-2xl py-3 px-4 text-sm focus:ring-2 focus:ring-indigo-600 outline-none transition-all"
+                            />
+                            <button className="absolute right-2 top-1.5 bg-indigo-600 text-white p-1.5 rounded-xl hover:bg-indigo-700 transition-colors">
+                                <Mail size={16} />
+                            </button>
                         </div>
-                        <div className="pt-4">
-                            <p className="text-xs text-gray-500 mb-2 font-medium uppercase">Stay Updated</p>
-                            <div className="flex gap-2">
-                                <input
-                                    type="email"
-                                    placeholder="Email address"
-                                    className="bg-white border border-gray-200 px-3 py-2 rounded-lg text-sm w-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                                />
-                                <button className="bg-indigo-600 text-white px-3 py-2 rounded-lg text-sm font-bold hover:bg-indigo-700 transition-colors">
-                                    Join
-                                </button>
-                            </div>
-                        </div>
+                        <p className="text-[10px] font-bold text-gray-400 uppercase tracking-tighter">
+                            By subscribing, you agree to our <span className="text-indigo-600 underline">Privacy Policy</span>.
+                        </p>
                     </div>
 
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-gray-500 text-xs">
-                        © {currentYear} SkillSync Inc. All rights reserved.
+                <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p className="text-xs font-bold text-gray-400">
+                        © 2026 NexTrade Marketplace. Built for SCIC Assignment.
                     </p>
-                    <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-                        <span className="text-gray-500 text-xs font-medium">System Status: All systems operational</span>
+                    <div className="flex gap-8">
+                        <Link href="#" className="text-[10px] font-black uppercase text-gray-400 hover:text-indigo-600 tracking-widest transition-colors">Privacy</Link>
+                        <Link href="#" className="text-[10px] font-black uppercase text-gray-400 hover:text-indigo-600 tracking-widest transition-colors">Terms</Link>
+                        <Link href="#" className="text-[10px] font-black uppercase text-gray-400 hover:text-indigo-600 tracking-widest transition-colors">Cookies</Link>
                     </div>
                 </div>
             </div>

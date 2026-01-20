@@ -10,7 +10,7 @@ const CategoryGrid = () => {
             color: "bg-indigo-600",
             lightColor: "bg-indigo-50",
             textColor: "text-indigo-600",
-            imageText: "💻", // Replace with real images in <img> tags later
+            imageText: "💻",
         },
         {
             name: "Modern Fashion",
@@ -66,7 +66,7 @@ const CategoryGrid = () => {
                     {categories.map((cat, index) => (
                         <div key={index} className="group relative">
                             {/* Image/Visual Area */}
-                            <div className={`${cat.lightColor} aspect-[4/5] rounded-3xl mb-6 flex items-center justify-center text-6xl group-hover:scale-[1.02] transition-transform duration-500 overflow-hidden relative shadow-inner`}>
+                            <div className={`${cat.lightColor} aspect-4/5 rounded-3xl mb-6 flex items-center justify-center text-6xl group-hover:scale-[1.02] transition-transform duration-500 overflow-hidden relative shadow-inner`}>
                                 <span>{cat.imageText}</span>
 
                                 {/* Floating Icon Badge */}
