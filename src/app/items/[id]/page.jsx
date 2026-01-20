@@ -27,7 +27,7 @@ export default function ItemDetailsPage({ params }) {
             try {
                 setLoading(true);
                 // 2. Fetch from your Express API using the MongoDB _id
-                const response = await fetch(`http://localhost:5000/api/items/${id}`);
+                const response = await fetch(`https://nex-trade-backend-ten.vercel.app/api/items/${id}`);
 
                 if (!response.ok) {
                     throw new Error("Item not found");

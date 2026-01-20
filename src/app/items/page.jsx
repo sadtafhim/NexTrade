@@ -14,7 +14,7 @@ export default function ItemListPage() {
         const fetchItems = async () => {
             try {
                 // Fetching from your MongoDB-connected Express server
-                const response = await fetch('http://localhost:5000/api/items');
+                const response = await fetch('https://nex-trade-backend-ten.vercel.app/api/items');
                 if (!response.ok) throw new Error('Failed to fetch');
                 const data = await response.json();
                 setItems(data);
