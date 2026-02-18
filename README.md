@@ -47,10 +47,3 @@ npm install
 npm run dev
 ```
 
-### Pro-Tips for your Submission:
-
-1. **The "out" Folder:** Remember that when you upload to Netlify, you are uploading the **contents** of the `out` folder.
-2. **Backend Readme:** Since your backend is a separate project, you should have a small `README.md` there too, explaining the MongoDB connection and the Express routes.
-3. **Screenshots:** If you want to get an **A+**, take a screenshot of your live marketplace and paste it into the "Features" section of the README!
-
-**Is there anything else you need to finalize for your assignment? I can help you write the Backend README or a summary of the project for your submission form!**
